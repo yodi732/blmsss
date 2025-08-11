@@ -1,0 +1,13 @@
+flask
+gunicorn
+flask-compress
+markdown
+PyYAML
+requests
+diff-match-patch
+Pillow
+aiohttp
+hypercorn
+Flask>=2.0
+PyMySQL
+werkzeug

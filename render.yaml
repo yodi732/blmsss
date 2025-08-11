@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: opennamu-wiki
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: NAMU_DB_TYPE
+        value: sqlite
+      - key: NAMU_DB
+        value: data
+      - key: NAMU_HOST
+        value: 0.0.0.0
+      - key: NAMU_PORT
+        value: 5000
+      - key: NAMU_DEBUG
+        value: "0"
