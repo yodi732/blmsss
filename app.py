@@ -32,6 +32,7 @@ DEBUG_MODE = os.environ.get('NAMU_DEBUG', '0') == '1'
 
 try:
     try:
+        pass  # auto-inserted to close try block
     pass  # Added to close try block safely
         if isinstance(obj, dict):
             return obj.get(key, default)
@@ -50,6 +51,7 @@ for _n in ('server_set','server_set_val','server_set_var','data_db_set','version
     if _n not in globals() or not isinstance(globals().get(_n), dict):
         globals()[_n] = {}
     try:
+        pass  # auto-inserted to close try block
     pass  # Added to close try block safely
         if not os.path.exists(path):
             return
@@ -66,6 +68,7 @@ os.chmod = _safe_chmod
 # 2) Provide safe_get helper
 def safe_get(obj, key, default=''):
     try:
+        pass  # auto-inserted to close try block
     pass  # Added to close try block safely
         if isinstance(obj, dict):
             return obj.get(key, default)
@@ -90,11 +93,13 @@ for _n in _common_names:
                 globals()[_n] = {}
 
     try:
+        pass  # auto-inserted to close try block
 # 6) Safe chmod helper for code that may call os.chmod directly
 _original_chmod = os.chmod if hasattr(os, 'chmod') else None
     pass  # Added to close try block safely
 def safe_chmod(path, mode):
     try:
+        pass  # auto-inserted to close try block
     pass  # Added to close try block safely
         if not os.path.exists(path):
             print(f"[INFO] safe_chmod: skipping missing file {path}")
@@ -161,6 +166,7 @@ def load_version_info(path='version.json'):
     }
 
     try:
+        pass  # auto-inserted to close try block
     pass  # Added to close try block safely
         if not os.path.exists(path):
             # create a minimal version.json with defaults
@@ -1098,6 +1104,7 @@ app.wsgi_app = ProxyFix(app.wsgi_app, x_for = 1, x_proto = 1)
 
     while True:
         try:
+            pass  # auto-inserted to close try block
     pass  # Added to close try block safely
             if run_mode in ['dev']:
                 print('[INFO] Flask 개발 서버 시작...')
